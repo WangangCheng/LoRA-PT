@@ -68,4 +68,13 @@ cd evaluation
 python dice.py
 python hd95.py
 ```
-Acknowledgement
+# Acknowledgement
+If you find LoRa-pt useful for your research and applications, please cite using this BibTeX:
+```bibtex
+@ARTICLE{2024arXiv240711292H,
+       author = {{He}, Guanghua and {Cheng}, Wangang and {Zhu}, Hancan and {Yu}, Gaohang},
+       title = "{LoRA-PT: Low-Rank Adapting UNETR for Hippocampus Segmentation Using Principal Tensor Singular Values and Vectors}",
+       journal = {arXiv preprint arXiv:2407.11292},
+       year = 2024
+}
+```
