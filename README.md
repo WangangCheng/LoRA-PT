@@ -69,7 +69,7 @@ python dice.py
 python hd95.py
 ```
 # Acknowledgement
-If you find LoRa-pt useful for your research and applications, please cite using this BibTeX:
+If you find LoRA-PT useful for your research and applications, please cite using this BibTeX:
 ```bibtex
 @ARTICLE{2024arXiv240711292H,
        author = {{He}, Guanghua and {Cheng}, Wangang and {Zhu}, Hancan and {Yu}, Gaohang},
