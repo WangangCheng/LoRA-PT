@@ -8,21 +8,21 @@ import nibabel as nib
 
 # train
 train_set = {
-        'root': '/home/ubuntu2204/cwg/UVSnet/Datasets/EADC-LPBA40',
+        'root': 'your_path/Datasets/EADC-LPBA40',
         'flist': 'train.txt',
         'has_label': True
         }
 
 # test/validation data
 valid_set = {
-        'root': '/home/ubuntu2204/cwg/UVSnet/Datasets/EADC-LPBA40',
+        'root': 'your_path/Datasets/EADC-LPBA40',
         'flist': 'valid.txt',
         'has_label': True
         }
 
 
 test_set = {
-        'root': '/home/ubuntu2204/cwg/UVSnet/Datasets/EADC-LPBA40',
+        'root': 'your_path/Datasets/EADC-LPBA40',
         'flist': 'test.txt',
         'has_label': False
         }
@@ -37,27 +37,6 @@ def nib_load(file_name):
     proxy.uncache()
     return data
 
-
-def process_i16(path, has_label=True):
-    """ Save the original 3D MRI images with dtype=int16.
-        Noted that no normalization is used! """
-    label = np.array(nib_load(path + 'error.nii'), dtype='uint8', order='C')
-
-    images = np.array(nib_load(path + 'img.nii'),dtype='int16',order = 'C')
-    images = np.expand_dims(images, axis=-1)
-    # images = np.stack([
-    #     np.array(nib_load(path + modal + '.nii'), dtype='int16', order='C')
-    #     for modal in modalities], -1)# [240,240,155]
-
-    output = path + 'data_i16.pkl'
-
-    with open(output, 'wb') as f:
-        print(output)
-        print(images.shape, type(images), label.shape, type(label))  # (240,240,155,4) , (240,240,155)
-        pickle.dump((images, label), f)
-
-    if not has_label:
-        return
 
 
 def process_f32b0(path, has_label=True):
