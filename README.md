@@ -52,3 +52,20 @@ After pre-process, sub{i}_data_f32b0.pkl will be generated in each sub{i} direct
 ```python
 cd LoRA-PT
 python LoRA-PT.py
+```
+After the training is completed, the trained weight file will be in `checkpointd/UNETR2024-XX-XX`
+# Inference
+Modify the time in test.py, which is the training date
+```python
+python test.py
+```
+The inference process loads the average of the last four epoch weights. If you don’t want this, you can set `multimodel=false` so that the inference process will load the weight file of the last epoch.
+
+# Evaluation
+Before evaluation, you should modify the your_path part in dice.py and hd95.py files
+```python
+cd evaluation
+python dice.py
+python hd95.py
+```
+Acknowledgement
