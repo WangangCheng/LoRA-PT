@@ -61,6 +61,7 @@ python test.py
 ```
 The inference process loads the average of the last four epoch weights. If you don’t want this, you can set `multimodel=false` so that the inference process will load the weight file of the last epoch.
 
+The inference results will be saved in the `output/submission`
 # Evaluation
 Before evaluation, you should modify the your_path part in dice.py and hd95.py files
 ```python
