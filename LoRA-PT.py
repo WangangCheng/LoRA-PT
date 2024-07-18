@@ -141,7 +141,7 @@ class Finetune_UNETR:
             return None
         # Perform t-SVD decomposition
 
-        D1 = fft(weight_tensor_linear1, dim=0)  # 进行快速傅立叶变换
+        D1 = fft(weight_tensor_linear1, dim=0) 
         D2 = fft(weight_tensor_qkv, dim=0)
         D3 = fft(weight_tensor_linear2, dim=0)
         
