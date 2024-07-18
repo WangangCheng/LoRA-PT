@@ -28,12 +28,11 @@ Note: Our cuda version is 12.4, You can install pytorch from this [link](https:/
 The data storage location should follow the following method
 - Datasets/
   - EADC/
-    - inputs/
-      - sub1/
-        - sub1_img.nii.gz
-        - sub1_mask.nii.gz
-      - ...
-      - sub135/
+    - sub1/
+      - sub1_img.nii.gz
+      - sub1_mask.nii.gz
+    - ...
+    - sub135/
         - sub135_img.nii.gz
         - sub135_mask.nii.gz 
     - train.txt
@@ -44,5 +43,12 @@ Note:The label is not matched the image in th fllowing subjects:002_S_0938 (sub8
 
 # Preprocessing
 ```python
-cd preprocess
+cd data
 python preprocess.py
+```
+After pre-process, sub{i}_data_f32b0.pkl will be generated in each sub{i} directory
+
+# Training
+```python
+cd LoRA-PT
+python LoRA-PT.py
