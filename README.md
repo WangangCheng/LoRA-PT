@@ -18,7 +18,7 @@ Note: Our cuda version is 12.4, You can install pytorch from this [link](https:/
 # Data downloading
 1. You can download the pre-trained weights at this [Link](https://drive.google.com/file/d/1Jtkw2epEYVknGOSGKG0xnQpg4sacEs8j/view?usp=sharing), You can download the pre-trained weights from this link and put them in the `checkpoint/UNETR2024-05-23`.
 
-2. Download our processed EADC data from Baidu Netdisk [Link](https://drive.google.com/file/d/1NY3ItOdsptI2lZ_iYvKR9PC6ApHSfdw7/view?usp=sharing), Or you can also get the source data on the official website [EADC](http://adni.loni.usc.edu/).
+2. Download our processed EADC data from Google Drive [Link](https://drive.google.com/file/d/1NY3ItOdsptI2lZ_iYvKR9PC6ApHSfdw7/view?usp=sharing), Or you can also get the source data on the official website [EADC](http://adni.loni.usc.edu/).
 
 3. Download the LPBA40 dataset You can get it from this [Link](https://www.loni.usc.edu/research/atlas_downloads)
 
