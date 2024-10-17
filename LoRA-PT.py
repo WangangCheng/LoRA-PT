@@ -209,7 +209,7 @@ class Finetune_UNETR:
             S5 = S_linear2_diag[self.r:, self.r:].type(torch.complex64)
             V5 = V_linear2[:, self.r:].type(torch.complex64)
 
-            W5[i] = torch.mm(U3, torch.mm(S5, V5.conj().T))
+            W5[i] = torch.mm(U5, torch.mm(S5, V5.conj().T))
             
             U6 = U_linear2[:, :self.r].type(torch.complex64).detach().clone()
             S6 = S_linear2_diag[:self.r, :self.r].type(torch.complex64).detach().clone()
